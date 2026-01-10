@@ -49,8 +49,8 @@ def calculate_st_full(df, period, multiplier):
     return direction, ub, lb
 
 # --- UI 配置 ---
-st.set_page_config(page_title="Fish Diagnoser E1.4.3", layout="wide")
-st.title("盛夏風情・魚兒診斷器 (E1.4.3 - 摺疊面板優化版)")
+st.set_page_config(page_title="Fish Diagnoser E1.4.5", layout="wide")
+st.title("盛夏風情・魚兒診斷器 (E1.4.5)")
 
 # --- Sidebar ---
 st.sidebar.header("🔍 診斷參數設定")
@@ -220,4 +220,4 @@ if query:
                     ws.column_dimensions[ws.cell(header_row, i).column_letter].width = w
 
                 wb.save(output)
-                st.download_button(label="📥 下載 Excel 專業診斷報表", data=output.getvalue(), file_name=f"Fish_Report_{datetime.date.today()}.xlsx", use_container_width=True)
+                st.download_button(label="📥 下載 Excel 專業診斷報表", data=output.getvalue(), file_name=f"魚兒健檢_{datetime.date.today()}.xlsx", use_container_width=True)
